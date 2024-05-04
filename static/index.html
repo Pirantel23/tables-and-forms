@@ -9,8 +9,62 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="post">
+        <div>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required min="3" max="50">
+        </div>
+        
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div>
+            <label for="pet_type">Тип питомца:</label>
+            <select id="pet_type" name="petType" required>
+                <option value="dog">Собака</option>
+                <option value="cat">Cat</option>
+            </select>
+            </select>
+        </div>
 
+        <div>
+            <label for="gender">Пол:</label>
+            <select id="gender" name="gender" required>
+                <option value="boy">Мальчик</option>
+                <option value="girl">Девочка</option>
+                <option value="none">None</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="eye_color">Цвет глаз:</label>
+            <input type="color" id="eye_color" name="eyeColor" required>
+        </div>
+        
+        <div>
+            <label for="tail_length">Длина хвоста:</label>
+            <input type="text" id="tail_length" name="tailLength" required min="7" max="120"><br><br>
+        </div>
+        
+        <div>
+            <label for="birthdate">Дата рождения:</label>
+            <input type="date" id="birthdate" name="dateOfBirth" required><br><br>
+        </div>
+        
+        <div>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+        </div>
+        
+        <div>
+            <input type="checkbox" name="rules" required value="true">Согласен с правилами
+        </div>
+
+        <button type="submit">Найти</button>
+        <input type="reset" value="Сбросить значения">
+    </form>
 </main>
 </body>
 </html>
